@@ -1,0 +1,23 @@
+extends ../templates/template.pug
+
+block main
+ .main-container
+  .container-title
+   h1.container-title__title Todo List - ver. 0.2
+
+  .container-form
+   form.container-form__form#form
+    input(type="text" name="input_task" minlength="1" maxlength="40" required autocomplete="off" placeholder="type a task").container-form__form__input-item
+
+    .container-form__form__div-colors#div-colors
+     .container-form__form__div-colors__html-div1.div1
+     .container-form__form__div-colors__html-div2.div2
+     .container-form__form__div-colors__html-div3.div3
+
+    input(type="datetime-local" name="input_date" required autocomplete="off").container-form__form__input-date#input-date
+    input(type="submit" name="input_submit" data-action="add" value="+").container-form__form__button
+
+  .container-tasks#container-tasks
+
+  .container-messages#container-messages
+   p.container-messages__paragraph#messages-paragraph
